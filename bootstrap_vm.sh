@@ -16,7 +16,7 @@ else
     exit 1
 fi
 # Update package manager
-#apt-get update
+apt-get update
 #apt-get -y upgrade
 
 # Install some packages
