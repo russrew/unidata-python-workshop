@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # A smaller instance used for debugging.
-  config.vm.define "w64_small", primary: true do |v|
+  config.vm.define "w64_small" do |v|
     v.vm.provision :shell, :path => "bootstrap_vm.sh", :args => "64"
     v.vm.hostname = "w64small"
     v.vm.network "forwarded_port", guest: 8888, host: 8864, protocol: 'tcp'
