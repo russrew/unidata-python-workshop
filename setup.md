@@ -40,7 +40,7 @@ From the command line:
 
 ~~`conda config --add channels https://conda.binstar.org/Unidata`~~
 
-~~`conda create -n workshop python=2 numpy matplotlib cartopy ipython ipython-notebook netcdf4 owslib pyudl networkx`~~
+~~`conda create -n workshop python=2 numpy matplotlib cartopy ipython ipython-notebook netcdf4 owslib pyudl networkx basemap`~~
 
 ```
 cd unidata-python-workshop
@@ -68,6 +68,8 @@ git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR EMAIL ADDRESS"
 
 git remote add myfork https://github.com/YOUR-USERNAME/unidata-python-workshop.git
+
+git remote set-url myfork https://YOUR-USERNAME@github.com/YOUR-USERNAME/unidata-python-workshop.git
 
 # Later if you wish to save (i.e., push out) your commits
 

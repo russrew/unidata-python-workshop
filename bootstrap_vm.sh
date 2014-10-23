@@ -8,6 +8,8 @@ fi
 CONDALOCK="/home/vagrant/.condainstalled"
 
 if [ "$1" == "32" ]; then
+    echo "Error: 32-bit VM is unsupported."
+    exit 1
     INSTFILE="Anaconda-2.0.1-Linux-x86.sh"
 elif [ "$1" == "64" ]; then
     INSTFILE="Anaconda-2.0.1-Linux-x86_64.sh"
@@ -61,7 +63,7 @@ if [ ! -f "$CONDALOCK" ]; then
 
     sudo -u vagrant -i /home/vagrant/anaconda/bin/conda config --add channels https://conda.binstar.org/Unidata
 
-    sudo -u vagrant -i /home/vagrant/anaconda/bin/conda create -n workshop --yes python=2 numpy matplotlib cartopy ipython ipython-notebook netcdf4 owslib pyudl networkx
+    sudo -u vagrant -i /home/vagrant/anaconda/bin/conda create -n workshop --yes python=2 numpy matplotlib cartopy ipython ipython-notebook netcdf4 owslib pyudl networkx basemap
 
 fi
 
@@ -115,4 +117,3 @@ fi
 
 # Clean up
 chown -R vagrant:vagrant /home/vagrant
-
